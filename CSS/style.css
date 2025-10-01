@@ -1,8 +1,8 @@
-
 /* Definition for Page Layout */
+/* For responsive padding and diont size, i utilized the clamp() function as described in W3*/
 body {
    background: white;
-   font-size: 2em;
+   font-size: clamp(1rem, 2vw, 2rem);;
    text-align: center;
    display: grid;
    margin: 0;
@@ -17,212 +17,69 @@ body {
    min-height: 100vh;
 }
 
+/* Header for top of page to show the page they are on */
 header {
     grid-area: head;
     background: #818181;
     color:white;
-    padding: 20px;
+    padding: clamp(10px, 2vw, 20px);
+    font-size: clamp(1.2rem, 2.5vw, 2rem);
+    align-items: center;
 }
 
+header h1 {
+    margin: clamp(25px, 2vw, 40px);
+    font-size: clamp(1.5rem, 3vw, 3rem);
+}
+
+/* Main content area */
 main {
     grid-area: main;
-    padding: 20px;
+    padding: clamp(10px, 2vw, 20px);
+    font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
+/* Footer for bottom of page */
 footer {
     background-color: #333;
     color: white;
     text-align: center;
-    padding: 10px;
+    padding: clamp(5px, 1.5vw, 10px);
+    font-size: clamp(0.8rem, 1.5vw, 1rem);
+    align-items: center;
+    align-content: center;
+
     grid-area: foot;
 }
 
+/* Refrenced W3Schools.com for side navigation bar. */
 /* Add a black background color to the top navigation */
 nav.side-nav {
-  background-color: #111; /* Black */
+  background-color: #CCE0E8; 
   color:white;
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 40px;
+  overflow-x: hidden;
+  padding-top: clamp(20px, 4vw, 40px);
+  font-size: clamp(0.9rem, 2vw, 1.5rem);
 
   grid-area: nav;
 }
 
-/* Style the links inside the navigation bar */
 nav.side-nav a {
-  padding: 6px 8px 6px 16px;
+  padding: clamp(4px, 1vw, 8px) clamp(8px, 2vw, 16px);
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+  font-size: clamp(0.8rem, 2vw, 1.5rem);
+  color: black;
   display: block;
 }
 
-/* Change the color of links on hover */
+/* Changes Links color on hover */
 nav.side-nav a:hover {
-  background-color: #ddd;
+  background-color: #E8D4C5;
   color: black;
 }
 
-/* Add a color to the active/current link */
+/* Highlight the active/current link */
 nav.side-nav a.active {
-  background-color: #04AA6D;
-  color: white;
-}
-
-/* Home Page */
-.homepage-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr; /* 2 columns */
-  grid-template-rows: auto auto;  /* 2 rows */
-  gap: 20px;
-  padding: 40px;
-  max-width: 600px;
-  margin: 0 auto;
-  box-sizing: border-box;
-}
-
-/* Image box */
-.hp-image-box img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-/* Intro section */
-.hp-intro-box {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 20px;
-  background: #f9f9f9;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.hp-intro-box h1 {
-  margin-bottom: 15px;
-  font-size: 2em;
-  color: #333;
-}
-
-.hp-intro-box p {
-  font-size: 1.2em;
-  color: #555;
-  line-height: 1.6;
-}
-
-/* Cards (Projects & About) */
-.hp-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 30px;
-  background: white;
-  border-radius: 8px;
-  text-decoration: none;
-  color: inherit;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.hp-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
-}
-
-.hp-card h2 {
-  margin-bottom: 10px;
-  color: #04AA6D;
-}
-
-/* Projects Page */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
-  gap: 30px;
-  padding: 20px;
-  min-height: auto;
-  justify-content: center;
-}
-
-.project-card {
-  display: flex;
-  flex-direction: column; /* stack sections vertically */
-  justify-content: space-between; /* push footer to bottom */
-  width: 100%;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  overflow: hidden;
-  padding: 0; /* we'll control spacing in sections */
-  font-family: Arial, sans-serif;
-
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* smooth animation */
-  cursor: pointer; /* optional: indicates interactivity */
-}
-
-.project-card:hover {
-  transform: translateY(-5px); /* moves card up */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.2); /* stronger shadow */
-}
-
-/* Top section: Title */
-.card-title {
-  background: #04AA6D;
-  color: white;
-  font-weight: bold;
-  font-size: 1.5rem;
-  text-align: center;
-  padding: 15px;
-}
-
-/* Divider */
-.card-title::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background: #ddd;
-  margin-top: 0;
-}
-
-/* Middle section: Description */
-.card-description {
-  flex: 1; /* take up remaining space */
-  padding: 15px;
-  text-align: left;
-
-  font-size: clamp(12px, 1.5vw, 16px); /* responsive font size */
-  color: #333;
-}
-
-/* Divider above footer */
-.card-footer::before {
-  content: "";
-  display: block;
-  height: 1px;
-  background: #ddd;
-  margin-bottom: 10px;
-}
-
-/* Bottom section: Button */
-.card-footer {
-  padding: 15px;
-  display: flex;
-  justify-content: center; /* center button horizontally */
-  align-items: center; /* center button vertically */
-}
-
-.card-footer button {
-  padding: 10px 20px;
-  border: none;
-  border-radius: 6px;
-  background: #04AA6D;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-
-.card-footer button:hover {
-  background: #028a55;
+  background-color: #BAC2DD;
+  color: black;
 }

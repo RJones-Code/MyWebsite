@@ -1,39 +1,91 @@
 <html lang="en">
-    <style>
-        table, th, td {
-            border: 1px solid black
-        }
-    </style>
     <head>
+        <meta charset="UTF-8">
         <title>Projects</title>
+        <link rel="stylesheet" href="CSS/style.css">
     </head>
     <body>
-        <section id="Projects">
-        <h1>Projects</h1>
-            <p>
-                Goal is to create a scrollable list of projects I have done and sort them by
-                some attribute? Maybe through the years, maybe by topic (Machine Learning,
-                web development, game design, etc.). This page will contain the wow feature by
-                adding some interactive animation for when the user hovers over the icons for 
-                specific projects. Ideally they will link to a latex pdf detailing the purpose,
-                code, and process. For now I will use a table to demonstrate the space.
-            </p>
-            <div>
-                <table>
-                    <caption>Projects</caption>
-                    <tr>
-                        <th>Project</th>
-                        <th>Description</th>
-                    </tr>
-                    <tr>
-                        <th> <a href="ProjectResources/exampleProject.pdf" alt="Error: Example Project" target="_blank">Example Project</a></th>
-                        <th>Example Description...</th>
-                    </tr>
-                </table>
+        <!-- Navigation Bar -->
+        <nav class="side-nav">
+            <a href="mainPage.html" alt="Error: Main Page">Home</a></li>
+            <a href="aboutMePage.html" alt="Error: About Me Page">About Me</a></li>
+            <a class="active" href="projectsPage.html" alt="Error: Projects Page">Projects</a></li>
+            <a href="contactPage.html" alt="Error: Contact Page">Contact</a></li>
+        </nav>
+
+        <!-- Page Header -->
+        <header>
+            <h1>My Projects</h1>
+        </header>
+
+        <!-- Main Body -->
+        <main>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="card-title">
+                        <h2>Project 1</h2>
+                    </div>
+                    <div class="card-description">
+                        <p>Using XAMPP and to host the backend we created a school database 
+                            management system with PHP and MySQL. The program allows the user to
+                            sign up for an account, log in, enroll for classes, drop from courses.
+                            The user is also able to assign itself a parent account.
+                        </p>
+                    </div>
+                    <div class="card-footer">
+                        <button>View</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="card-title">
+                        <h2>Project 2</h2>
+                    </div>
+                    <div class="card-description">
+                        <p>Description of Project 2...</p>
+                    </div>
+                    <div class="card-footer">
+                        <button>View</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="card-title">
+                        <h2>Project 3</h2>
+                    </div>
+                    <div class="card-description">
+                        <p>Description of Project 3...</p>
+                    </div>
+                    <div class="card-footer">
+                        <button>View</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="card-title">
+                        <h2>Project 4</h2>
+                    </div>
+                    <div class="card-description">
+                        <p>Description of Project 4...</p>
+                    </div>
+                    <div class="card-footer">
+                        <button>View</button>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="card-title">
+                        <h2>Project 5</h2>
+                    </div>
+                    <div class="card-description">
+                        <p>Description of Project 5...</p>
+                    </div>
+                    <div class="card-footer">
+                        <button>View</button>
+                    </div>
+                </div>
             </div>
-        </section>
+        </main>
     </body>
+
+    <!-- Footer -->
     <footer>
-        <a href="mainPage.html" alt="Error: Main Page">Back</a>
+        <p>© 2025 by Russell Jones. All rights reserved.</p>
     </footer>
 </html>

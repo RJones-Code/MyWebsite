@@ -1,33 +1,36 @@
+/* stylizing for about me page */
 .about-me {
     display: grid;
-    grid-template-columns: 1fr 1fr;  /* 2 equal columns */
-    grid-template-rows: 1fr 1fr;     /* 2 equal rows */
-    gap: 1rem;                       /* space between sections */
-    height: 100vh;                   /* full viewport height */
+    grid-template-columns: 1fr 1fr;  
+    grid-template-rows: 1fr 1fr;   
+    gap: 1rem;                     
+    height: 100vh;               
     padding: 1rem;
 }
 
+/* info section and all styling used for elements used in info section */
 .about-me .info {
     background-color: #D0ADD5;
     display: flex;
-    flex-direction: column;  /* stack elements vertically */
-    justify-content: space-between; /* stretch to fill space */
-    align-items: flex-start; /* left-align content */
+    flex-direction: column; 
+    justify-content: space-between;
+    align-items: flex-start;
     padding: 1rem;
     border-radius: 12px;
 }
 
 .info p {
-  margin: 0;                /* remove default spacing */
-  text-align: left;         /* left-align text */
-  line-height: 1.6;         /* improve readability */
-  flex: 1;                  /* let text fill vertical space */
+  margin: 0;               
+  text-align: left;       
+  line-height: 1.6;        
+  flex: 1;               
 }
 
 .info li {
     text-align: left;
 }
 
+/* image section of screen */
 .about-me .picture {
     background-color: #d0e7ff;
     display: flex;
@@ -40,6 +43,6 @@
 .picture img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: contain;       /* shrink to fit inside the box */
+  object-fit: contain;      
   border-radius: 12px;
 }

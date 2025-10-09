@@ -1,0 +1,103 @@
+/* Contact me grid */
+.contact-me {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: stretch;
+    gap: 10%;
+    padding:  clamp(5%, 2vw, 15%);
+
+    grid-template-areas: 
+        "info contact-form";
+    height: 100%;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+/* Info section with info and links */
+.info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    grid-area: info;
+    padding: clamp(15px, 2vw, 20px);
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    border-radius: 8px;
+    margin-left: 10px;
+}
+
+.info #info-top {
+    margin-bottom: auto;
+    margin-top: 5%;
+}
+
+.info #info-top p {
+    text-align: left;
+}
+
+.info #links {
+    margin-top: auto;
+    margin-bottom: 5%;
+}
+
+.info #links ul {
+    text-align: left;
+}
+
+/* Contact form section */
+.contact-form {
+    grid-area: contact-form;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    justify-content: center;
+    height: 100%;
+    gap: 1rem;
+    padding: clamp(20px, 2vw, 30px);
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    border-radius: 8px;
+    margin-right: 10px;
+}
+
+/* Form section for first and last name on same row */
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 1rem; 
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Styling for form elements */
+.contact-form label {
+    display: block;
+    margin-bottom: clamp(5px, 1vw, 10px);
+}
+
+.contact-form input[type="text"], input[type="email"], textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.contact-form button[type="submit"] {
+    margin-top: clamp(5px, 1vw, 10px);
+    padding: clamp(5px, 1vw, 10px) clamp(10px, 2vw, 20px);
+    background-color: #846CC9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    width: 20%;
+    align-self: flex-end;
+}
+
+.contact-form button[type="submit"]:hover {
+    background-color: #6B4F9C;
+}

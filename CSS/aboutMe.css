@@ -1,0 +1,45 @@
+.about-me {
+    display: grid;
+    grid-template-columns: 1fr 1fr;  /* 2 equal columns */
+    grid-template-rows: 1fr 1fr;     /* 2 equal rows */
+    gap: 1rem;                       /* space between sections */
+    height: 100vh;                   /* full viewport height */
+    padding: 1rem;
+}
+
+.about-me .info {
+    background-color: #D0ADD5;
+    display: flex;
+    flex-direction: column;  /* stack elements vertically */
+    justify-content: space-between; /* stretch to fill space */
+    align-items: flex-start; /* left-align content */
+    padding: 1rem;
+    border-radius: 12px;
+}
+
+.info p {
+  margin: 0;                /* remove default spacing */
+  text-align: left;         /* left-align text */
+  line-height: 1.6;         /* improve readability */
+  flex: 1;                  /* let text fill vertical space */
+}
+
+.info li {
+    text-align: left;
+}
+
+.about-me .picture {
+    background-color: #d0e7ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.picture img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;       /* shrink to fit inside the box */
+  border-radius: 12px;
+}

@@ -55,31 +55,31 @@ footer {
 /* Refrenced W3Schools.com for side navigation bar. */
 /* Add a black background color to the top navigation */
 nav.side-nav {
-  background-color: #CCE0E8; 
-  color:white;
-  overflow-x: hidden;
-  padding-top: clamp(20px, 4vw, 40px);
-  font-size: clamp(0.9rem, 2vw, 1.5rem);
+    background-color: #CCE0E8; 
+    color:white;
+    overflow-x: hidden;
+    padding-top: clamp(20px, 4vw, 40px);
+    font-size: clamp(0.9rem, 2vw, 1.5rem);
 
-  grid-area: nav;
+    grid-area: nav;
 }
 
 nav.side-nav a {
-  padding: clamp(4px, 1vw, 8px) clamp(8px, 2vw, 16px);
-  text-decoration: none;
-  font-size: clamp(0.8rem, 2vw, 1.5rem);
-  color: black;
-  display: block;
+    padding: clamp(4px, 1vw, 8px) clamp(8px, 2vw, 16px);
+    text-decoration: none;
+    font-size: clamp(0.8rem, 2vw, 1.5rem);
+    color: black;
+    display: block;
 }
 
 /* Changes Links color on hover */
 nav.side-nav a:hover {
-  background-color: #E8D4C5;
-  color: black;
+    background-color: #E8D4C5;
+    color: black;
 }
 
 /* Highlight the active/current link */
 nav.side-nav a.active {
-  background-color: #BAC2DD;
-  color: black;
+    background-color: #BAC2DD;
+    color: black;
 }

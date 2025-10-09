@@ -12,3 +12,14 @@ Finished About me page and contact me pages. They contain information to contact
 
 # Updating
 To update website access the source files to make any new additions or changes.
+
+# Structure
+The website is divised between 4 pages:
+1. Home page (index)
+    * The hompage is the main page and introduction to users and reccomends them to visit the projects page and about me page.
+2. About me
+   * The about me pages contains a brief introduction about me and some information about my education, skills, and expereiences.
+3. Projects
+   * The projects page is a list of cards that incoroporate cards with a brief description of projects, the name of the projects, and a button to redirect the user to information abput the projects.
+4. Contact
+   * The contact pages contains links to various methods to get in contact with me and posses a form the viewer can fill.
